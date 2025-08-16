@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Select Quiz Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin: 10px 0;
+        }
+        input[type=submit] {
+            display: block;
+            width: 100%;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select a Quiz Section</h2>
+        <form action="" method="get">
+            <div class="section">
+                <input type="radio" name="sectionId" value="1" required> Java
+            </div>
+            <div class="section">
+                <input type="radio" name="sectionId" value="2"> SQL
+            </div>
+            <div class="section">
+                <input type="radio" name="sectionId" value="3"> OOP
+            </div>
+            <div class="section">
+                <input type="radio" name="sectionId" value="4"> Web Technologies
+            </div>
+            <input type="submit" value="Start Quiz">
+        </form>
+    </div>
+</body>
+</html>

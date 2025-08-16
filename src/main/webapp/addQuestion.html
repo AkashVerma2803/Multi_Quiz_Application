@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Add Question</title>
+</head>
+<body>
+<div class="container">
+<h2>Add Question</h2>
+<form method="post" action="addQuestion">
+<select name="sectionId" required>
+<option value="" disabled selected>-- Select Section --</option>
+</select>
+<input type="text" name="question" placeholder="Question text" required>
+<input type="text" name="a" placeholder="Option A" required>
+<input type="text" name="b" placeholder="Option B" required>
+<input type="text" name="c" placeholder="Option C" required>
+<input type="text" name="d" placeholder="Option D" required>
+<select name="correct" required>
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="C">C</option>
+<option value="D">D</option>
+</select>
+<button type="submit">Add Question</button>
+</form>
+<div style="margin-top:10px"><a href="viewResults">Back to Results</a></div>
+<script>
+fetch('sections.json').then(r=>r.json()).then(data=>{
+let sel=document.querySelector('select[name=sectionId]');
+data.forEach(s=>{let o=document.createElement('option');o.value=s.section_id;o.text=s.section_name;sel.add(o);});
+});
+</script>
+</div>
+</body>
+</html>

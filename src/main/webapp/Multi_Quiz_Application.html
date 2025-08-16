@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Quiz Application</title>
+    <style>
+    
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  linear-gradient(90deg,rgba(77, 110, 90, 1) 42%, rgba(143, 134, 57, 1) 100%);
+        }
+
+        /* Card container */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 420px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 12px 0;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-user {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+        }
+
+        .btn-admin {
+            background: linear-gradient(135deg, #FF7043, #E64A19);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Multi Quiz Application</h1>
+        <button class="btn btn-user" onclick="location.href='login.html'">User Login</button>
+        <button class="btn btn-admin" onclick="location.href='adminLogin.html'">Admin Login</button>
+    </div>
+</body>
+</html>
